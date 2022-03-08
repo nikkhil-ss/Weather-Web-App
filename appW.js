@@ -6,19 +6,21 @@ let time=x.getHours();
 // let time=6;
 let background=document.getElementById('body');
 
+let backgroundImageLocation;
+
 if(time>4 && time<12){
-    background.style.backgroundImage= "url(/images/mornin.jpg)";
-    background.style.backgroundSize="100%";
-    background.style.fillOpacity="0.2"
+    backgroundImageLocation = "/images/mornin.jpg";
 }
 else if(time>=12 && time <16){
-    background.style.backgroundImage= "url(/images/afteernoon.jpg)";
-    background.style.backgroundSize="100%";
+    backgroundImageLocation= "/images/afteernoon.jpg";
 }
 else{
-    background.style.backgroundImage= "url(/images/night.png)";
-    background.style.backgroundSize="100%";
+    backgroundImageLocation= "/images/night.png";
 }
+
+background.style.backgroundImage= `url(.${backgroundImageLocation})`;
+background.style.backgroundSize="100%";
+
 
 let weather_info = {
     temperature: "",

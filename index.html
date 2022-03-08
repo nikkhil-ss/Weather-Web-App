@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/71a8ac86ae.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <div id="weather">
+        <h1 id="heading">Weather Details</h1>
+        <i class="fa-solid fa-spinner" id="loader" style="visibility: hidden;"></i>
+        <input id="input">
+        <button id="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+
+    </div>
+    <h3 id="date"></h3>
+    <H1></H1>
+    
+    <div>
+        <h2 id="city1">City</h2>
+        <h3 id="country_code">Country</h3>
+    </div>
+    <div id="bottom">
+        <h2 id="temp">Temp</h2>
+        <h3 id="atmosphere">Status</h3>
+    </div>
+    <h2 id="humidity"></h2>
+    <script src="appW.js"></script>
+    <script src="location.js"></script>
+</body>
+<style>
+    body {
+        background-image: url();
+    }
+
+    #weather {
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+    }
+
+    #city1 {
+        text-transform: uppercase;
+
+    }
+    #loader{
+        margin-left: auto;
+        font-size: 20px;
+        color: white;
+        /* margin-right: 6px; */
+        animation-name: spinner;
+        animation-duration: 1000ms;
+        animation-iteration-count: infinite;
+
+    }
+    @keyframes spinner{
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+    }
+
+    #input{
+        color: white;
+        font-size: large;
+        text-transform: capitalize;
+        margin-left: 6px;
+        margin-right: 0;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px solid white;
+    }
+    #input:focus{
+        border:0;
+        outline: 0;
+        border-bottom: 2px solid rgb(188, 236, 236);
+
+    }
+    #button{
+        margin-right: 5%;
+        /* background: transparent; */
+        border: 0;
+        background-color: transparent;
+        color: white;
+        height: 20px;
+
+    }
+    #button:hover{
+        transform: scale(1.3);
+    }
+    #heading {
+        text-transform: uppercase;
+        font-weight: lighter;
+        margin-left: 2%;
+        color: white;
+        font-family: 'Fredoka', sans-serif;
+        font-size: 70px;
+        justify-self : flex-start;
+    }
+
+
+    #date {
+        margin-left: 2%;
+        font-weight: lighter;
+        color: white;
+        font-family: 'Fredoka', sans-serif;
+        font-size: 30px;
+    }
+    #bottom{
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+    }
+    #temp{
+        font-size: 120px;
+        font-weight: normal;
+        color: white;
+        font-family: 'Fredoka', sans-serif;
+        /* margin-left: 2%; */
+        margin-bottom: 0;
+    }
+    #atmosphere{
+        color: white;
+        font-family: 'Fredoka', sans-serif;
+        font-weight: lighter;
+        /* margin-left: 5%; */
+        font-size: 25px;
+    }
+
+    h3 {
+        color: white;
+        font-family: 'Fredoka', sans-serif;
+    }
+    #city1{
+        font-weight: lighter;
+        font-family: 'Fredoka', sans-serif;
+        color: white;
+        font-size: 50px;
+        text-align: right;
+        margin-right: 5%;
+        margin-bottom: 0%;
+    }
+
+    #country_code{
+        margin-top: 0;
+        font-weight: lighter;
+        font-family: 'Fredoka', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: right;
+        margin-right: calc(5% + 5px);
+    }
+</style>
+
+</html>

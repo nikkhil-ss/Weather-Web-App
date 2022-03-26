@@ -10,6 +10,8 @@ let backgroundImageLocation;
 
 if(time>4 && time<12){
     backgroundImageLocation = "/images/mornin.jpg";
+
+    
 }
 else if(time>=12 && time <16){
     backgroundImageLocation= "/images/afteernoon.jpg";
@@ -19,6 +21,7 @@ else{
 }
 
 background.style.backgroundImage= `url(.${backgroundImageLocation})`;
+// background.style.repeat=no-repeat;
 background.style.backgroundSize="100%";
 
 
@@ -29,6 +32,7 @@ let weather_info = {
     atmosphere: "",
 
 }
+
 async function getData(city) {
 
     document.getElementById('loader').style.visibility='visible';
@@ -65,12 +69,9 @@ button.addEventListener('click', function (){
     if (input.value) {
         getData(input.value);
     }
-    else {
-        getData('Mathura');
-    }
-
+  
 })
-
+    
 
 
 // console.log(city);

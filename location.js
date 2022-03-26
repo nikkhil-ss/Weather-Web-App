@@ -1,4 +1,4 @@
-// Step 1: Get user coordinates
+
 function getCoordintes() {
 	var options = {
 		enableHighAccuracy: true,
@@ -11,7 +11,7 @@ function getCoordintes() {
 		var lat = crd.latitude.toString();
 		var lng = crd.longitude.toString();
 		var coordinates = [lat, lng];
-		console.log(`Latitude: ${lat}, Longitude: ${lng}`);
+		// console.log(`Latitude: ${lat}, Longitude: ${lng}`);
 		getCity(coordinates);
 		return;
 

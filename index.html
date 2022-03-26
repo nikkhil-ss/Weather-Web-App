@@ -39,10 +39,9 @@
     <script src="location.js"></script>
 </body>
 <style>
-    body {
-        background-image: url();
+    body{
+        background-size: 100%;
     }
-
     #weather {
         display: flex;
         /* justify-content: space-around; */
@@ -169,8 +168,11 @@
         #temp{
             font-size: 110px;
         }
-        #body{
-            height: 100vmax;
+        body{
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            background-size:cover;
+            
 
 
         }

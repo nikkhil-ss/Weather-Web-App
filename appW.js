@@ -21,8 +21,8 @@ else{
 }
 
 background.style.backgroundImage= `url(.${backgroundImageLocation})`;
-// background.style.repeat=no-repeat;
-background.style.backgroundSize="100%";
+
+// background.style.backgroundSize="100%";
 
 
 let weather_info = {
